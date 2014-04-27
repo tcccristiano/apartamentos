@@ -1,6 +1,9 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/includes/header.php'; ?>
 
 <?
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL);
 if(isset($_SESSION['email']) && (isset($_SESSION['senha']))){
     header("Location: apartamentos.php");
 }
@@ -8,39 +11,35 @@ if(isset($_SESSION['email']) && (isset($_SESSION['senha']))){
 
 <?
 
-$logando = new usuarios();
-if(isset($_POST['entrar'])){
-    $logando->logar($_POST['email'], $_POST['senha']);
-    if(!is_null($logando->resposta)){ ?>
-        <div class="resposta">
-            <div class="alert alert-danger">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Atenção!</strong> <? echo $logando->resposta ?>
-            </div>
-        </div>
-    <?
-    }
-}
+$usuario = new usuarios();
+
+$listarUsuarios = $usuario->listarUsuarios();
 
 ?>
-
 <?php
 
-$cadastrar = new usuarios();
+$sugestoes = new sugestoes();
+
+if($_SESSION['regra'] == 'admin'){
+    $listarSugestoes = $sugestoes->listarSugestoes();
+}else{
+    $listarSugestoes = $sugestoes->listarSugestoes($_SESSION['id']);
+}
 
 if(isset($_POST['submit'])){
-    $cadastrar->cadastro($_POST['nome'], $_POST['email'], $_POST['website'], $_POST['senha']);
-    if(!is_null($cadastrar->resposta)){ ?>
+
+    $sugestoes->novaSugestao($_POST['titulo'], $_POST['descricao'], $_POST['ativo'], $_POST['data_criacao']);
+    if(!is_null($sugestoes->mensagem)){ ?>
         <div class="resposta">
-            <div class="alert alert-danger">
+            <div class="alert alert-sucess">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Atenção!</strong> <? echo $cadastrar->resposta ?>
+                <strong>Atenção!</strong> <? echo $sugestoes->mensagem ?>
             </div>
         </div>
     <? }
 }
-
 ?>
+
     <script type="text/javascript">
         function validar(cadastrodeusuarios){
             if(cadastrodeusuarios.email.value.indexOf(('@' && '.'),0)== -1){
@@ -56,50 +55,42 @@ if(isset($_POST['submit'])){
         }
     </script>
 
-    <body>
-    <div class="container">
-        <div id="newuserlivro">
-            <h4>Faça sua sugestão para o condomínio</h4>
-        </div>
+<body>
+<div class="container">
+    <div id="newuserlivro">
+        <h4>Sugestões</h4>
+    </div>
+    <? if($_SESSION['regra'] == 'usuario') {?>
         <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="" onsubmit="return validar(cadastrodeusuarios);">
 
             <div class="control-group">
-                <label class="control-label" for="inputEmail">Nome</label>
+                <label class="control-label" for="inputEmail">Título</label>
                 <div class="controls">
-                    <input type="text" name="nome" placeholder="Nome">
-                </div>
-
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Email</label>
-                <div class="controls">
-                    <input type="text" name="email" placeholder="Email">
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Website</label>
-                <div class="controls">
-                    <input type="text" name="website" placeholder="Website">
-                </div>
-
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputPassword">Senha</label>
-                <div class="controls">
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputPassword">Confirmar senha</label>
-                <div class="controls">
-                    <input type="password" name="confSenha" placeholder="Confirmar Senha">
+                    <input type="text" name="titulo" placeholder="Título" required>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <button type="submit" name="submit" class="btn btn-primary"">Cadastrar</button>
+                    <textarea class="form-control" rows="10" name="descricao" placeholder="Descreva a sugestão..." required ></textarea>
                 </div>
             </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" name="submit" class="btn btn-primary"">Enviar</button>
+                </div>
+            </div>
+            <input type="hidden" name="data_criacao" value="<? echo date('Y-m-d H:m:s'); ?>">
+            <input type="hidden" name="ativo" value="1">
         </form>
-    </div>
+    <? } ?>
+    <? foreach($listarSugestoes as $listarSugestoes){ ?>
+        <div class="list-group">
+            <a href="#" class="list-group-item active">
+                <h4 class="list-group-item-heading"><? echo $listarSugestoes['nome']; ?></h4>
+                <p class="list-group-item-text"><? echo $listarSugestoes['descricao']; ?></p>
+            </a>
+        </div>
+    <? } ?>
+</div>
+<br/>
 <? include_once 'includes/footer.php'; ?>

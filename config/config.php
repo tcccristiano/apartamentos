@@ -1,4 +1,6 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/notificacoes.class.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/eventos.class.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/sugestoes.class.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/usuarios.class.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/mensagens.class.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/db.class.php'; ?>

@@ -4,32 +4,17 @@
 if(isset($_SESSION['email']) && (isset($_SESSION['senha']))){
     header("Location: apartamentos.php");
 }
-?>
-
-<?
-
-$logando = new usuarios();
-if(isset($_POST['entrar'])){
-    $logando->logar($_POST['email'], $_POST['senha']);
-    if(!is_null($logando->resposta)){ ?>
-        <div class="resposta">
-            <div class="alert alert-danger">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Atenção!</strong> <? echo $logando->resposta ?>
-            </div>
-        </div>
-    <?
-    }
+if(is_null($_SESSION['id'])){
+    header("Location: index.php");
 }
-
 ?>
 
 <?php
 
 $cadastrar = new usuarios();
 
-if(isset($_POST['submit'])){
-    $cadastrar->cadastro($_POST['nome'], $_POST['email'], $_POST['website'], $_POST['senha']);
+if(isset($_POST['email'])){
+    $cadastrar->cadastro($_POST['nome'], $_POST['email'], $_POST['dtNascimento'], $_POST['regra'], $_POST['numApartamento'], $_POST['apartamentoId']);
     if(!is_null($cadastrar->resposta)){ ?>
         <div class="resposta">
             <div class="alert alert-danger">
@@ -54,21 +39,23 @@ if(isset($_POST['submit'])){
                 return true;
             }
         }
+        jQuery(function($){
+            $("#dtNascimento").mask("99/99/9999");
+        });
     </script>
 
     <body>
     <div class="container">
         <div id="newuserlivro">
-            <h4>Cadastro de novos condôminos</h4>
+            <h4>Novo usuário? Inscreva-se!</h4>
         </div>
-        <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="" onsubmit="return validar(cadastrodeusuarios);">
+        <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="usuarios.php" onsubmit="return validar(cadastrodeusuarios);">
 
             <div class="control-group">
                 <label class="control-label" for="inputEmail">Nome</label>
                 <div class="controls">
                     <input type="text" name="nome" placeholder="Nome">
                 </div>
-
             </div>
             <div class="control-group">
                 <label class="control-label" for="inputEmail">Email</label>
@@ -77,27 +64,30 @@ if(isset($_POST['submit'])){
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="inputEmail">Website</label>
+                <label class="control-label" for="inputEmail">Data de nascimento</label>
                 <div class="controls">
-                    <input type="text" name="website" placeholder="Website">
-                </div>
-
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputPassword">Senha</label>
-                <div class="controls">
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="text" id="dtNascimento" name="dtNascimento">
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="inputPassword">Confirmar senha</label>
+                <label class="control-label" for="inputPassword">Regra</label>
                 <div class="controls">
-                    <input type="password" name="confSenha" placeholder="Confirmar Senha">
+                    <select name="regra">
+                        <option value="admin">Admin</option>
+                        <option value="usuario">usuario</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Número do apartamento</label>
+                <div class="controls">
+                    <input type="text" name="numApartamento" placeholder="numero do apartamento">
+                    <input type="hidden" name="apartamentoId" value="<? echo $_SESSION['apartamentoId'] ?>">
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <button type="submit" name="submit" class="btn btn-primary"">Cadastrar</button>
+                    <input type="submit" class="btn-sucess" value="Salvar">
                 </div>
             </div>
         </form>

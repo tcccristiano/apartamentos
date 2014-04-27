@@ -1,8 +1,12 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/includes/header.php'; ?>
 
 <?
+var_dump($_SESSION);
 if(isset($_SESSION['email']) && (isset($_SESSION['senha']))){
     header("Location: apartamentos.php");
+}
+if(is_null($_SESSION['id'])){
+    header("Location: index.php");
 }
 ?>
 
@@ -29,7 +33,7 @@ if(isset($_POST['entrar'])){
 $cadastrar = new usuarios();
 
 if(isset($_POST['submit'])){
-    $cadastrar->cadastro($_POST['nome'], $_POST['email'], $_POST['website'], $_POST['senha']);
+    $cadastrar->cadastro($_POST['nome'], $_POST['email'], $_POST['dtNascimento'], $_POST['regra'], $_POST['numApartamento']);
     if(!is_null($cadastrar->resposta)){ ?>
         <div class="resposta">
             <div class="alert alert-danger">
@@ -76,27 +80,24 @@ if(isset($_POST['submit'])){
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="inputEmail">Website</label>
+            <label class="control-label" for="inputEmail">Data de nascimento</label>
             <div class="controls">
-                <input type="text" name="website" placeholder="Website">
-            </div>
-
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="inputPassword">Senha</label>
-            <div class="controls">
-                <input type="password" name="senha" placeholder="Senha">
+                <input type="text" name="dtNascimento">
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="inputPassword">Confirmar senha</label>
+            <label class="control-label" for="inputPassword">Regra</label>
             <div class="controls">
-                <input type="password" name="confSenha" placeholder="Confirmar Senha">
+                <select name="regra">
+                    <option value="admin">Admin</option>
+                    <option value="usuario">usuario</option>
+                </select>
             </div>
         </div>
         <div class="control-group">
+            <label class="control-label" for="inputEmail">Número do apartamento</label>
             <div class="controls">
-                <button type="submit" name="submit" class="btn btn-primary"">Cadastrar</button>
+                <input type="text" name="numApartamento" placeholder="numero do apartamento">
             </div>
         </div>
     </form>

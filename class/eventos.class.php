@@ -1,32 +1,26 @@
 <?php
 
-class notificacoes{
+class eventos{
 
     public $mensagem = NULL;
 
-    public function listarNotificacoes($usuarioId = NULL){
+    public function listarEventos($usuarioId = NULL){
 
-        $minhasNotificacoes = array();
+        $meusEventos = array();
 
-        if(!empty($usuarioId)){
-            $sqlQuery = mysql_query("SELECT * FROM notificacao WHERE usuario_id = '".$usuarioId."' ORDER BY id DESC;");
-        }else{
-            $sqlQuery = mysql_query("SELECT * FROM notificacao nt
-                                               INNER JOIN usuario us
-                                                       ON ( nt.usuario_id = us.id ) ORDER BY nt.id DESC");
-        }
+        $sqlQuery = mysql_query("SELECT * FROM evento WHERE apartamento_id = '".$_SESSION['apartamentoId']."' ORDER BY id DESC;");
 
         if(mysql_num_rows($sqlQuery) > 0){
             while($row = mysql_fetch_array($sqlQuery)){
-                $minhasNotificacoes[] = $row;
+                $meusEventos[] = $row;
             }
         }
 
-        return $minhasNotificacoes;
+        return $meusEventos;
 
     }
 
-    public function novaNotificacao($titulo, $descricao, $ativo, $usuarioId, $dataCriacao){
+    public function novoEvento($titulo, $descricao, $ativo, $usuarioId, $dataCriacao){
 
         $sqlQuery = mysql_query("INSERT INTO notificacao (titulo, descricao, ativo, usuario_id, data_criacao) VALUES ('".$titulo."','".$descricao."','".$ativo."','".$usuarioId."','".$dataCriacao."');");
 
@@ -39,7 +33,7 @@ class notificacoes{
         return $this->mensagem;
     }
 
-    public function excluirNotificacao($id){
+    public function excluirEvento($id){
 
         $mensagem = null;
 
