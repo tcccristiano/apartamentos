@@ -47,12 +47,12 @@ class sugestoes{
 
         $mensagem = null;
 
-        $sqlQuery = mysql_query("DELETE FROM notificacao WHERE id = '".$id."' ");
+        $sqlQuery = mysql_query("DELETE FROM sugestao WHERE id = '".$id."' ");
 
-        if(mysql_num_rows($sqlQuery) > 0){
-            $this->mensagem = 'Notificação excluída com sucesso!';
+        if($sqlQuery){
+            $this->mensagem = 'Sugestão excluída com sucesso!';
         }else{
-            $this->mensagem = 'Notificação não foi excluída!';
+            $this->mensagem = 'Sugestão não foi excluída!';
         }
 
         return $this->mensagem;

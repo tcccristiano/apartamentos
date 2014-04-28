@@ -20,10 +20,8 @@ $listarUsuarios = $usuario->listarUsuarios();
 
 $sugestoes = new sugestoes();
 
-if($_SESSION['regra'] == 'admin'){
-    $listarSugestoes = $sugestoes->listarSugestoes();
-}else{
-    $listarSugestoes = $sugestoes->listarSugestoes($_SESSION['id']);
+if(isset($_GET['excluir'])){
+    $sugestoes->excluirSugestao($_GET['excluir']);
 }
 
 if(isset($_POST['submit'])){
@@ -37,6 +35,11 @@ if(isset($_POST['submit'])){
             </div>
         </div>
     <? }
+}
+if($_SESSION['regra'] == 'admin'){
+    $listarSugestoes = $sugestoes->listarSugestoes();
+}else{
+    $listarSugestoes = $sugestoes->listarSugestoes($_SESSION['id']);
 }
 ?>
 
@@ -83,11 +86,12 @@ if(isset($_POST['submit'])){
             <input type="hidden" name="ativo" value="1">
         </form>
     <? } ?>
-    <? foreach($listarSugestoes as $listarSugestoes){ ?>
+    <? foreach($listarSugestoes as $listarSugestao){ ?>
         <div class="list-group">
             <a href="#" class="list-group-item active">
-                <h4 class="list-group-item-heading"><? echo $listarSugestoes['nome']; ?></h4>
-                <p class="list-group-item-text"><? echo $listarSugestoes['descricao']; ?></p>
+                <h4 class="list-group-item-heading"><? echo $listarSugestao['nome']; ?></h4>
+                <p class="list-group-item-text"><? echo $listarSugestao['descricao']; ?></p>
+                <? if($_SESSION['regra'] == 'usuario'){ ?><a style="float:right; color:#CD2626" href="sugestoes.php?excluir=<? echo $listarSugestao['id']; ?>">Excluir</a><? } ?>
             </a>
         </div>
     <? } ?>

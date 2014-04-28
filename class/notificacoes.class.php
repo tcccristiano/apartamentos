@@ -11,9 +11,10 @@ class notificacoes{
         if(!empty($usuarioId)){
             $sqlQuery = mysql_query("SELECT * FROM notificacao WHERE usuario_id = '".$usuarioId."' ORDER BY id DESC;");
         }else{
-            $sqlQuery = mysql_query("SELECT * FROM notificacao nt
-                                               INNER JOIN usuario us
-                                                       ON ( nt.usuario_id = us.id ) ORDER BY nt.id DESC");
+            $sqlQuery = mysql_query("SELECT nt.id, nt.titulo, nt.descricao, nt.data_criacao FROM notificacao nt
+                                        INNER JOIN usuario us
+                                          ON ( nt.usuario_id = us.id )
+                                        WHERE us.apartamento_id = '".$_SESSION['apartamentoId']."' ORDER BY nt.id DESC");
         }
 
         if(mysql_num_rows($sqlQuery) > 0){
@@ -45,7 +46,7 @@ class notificacoes{
 
         $sqlQuery = mysql_query("DELETE FROM notificacao WHERE id = '".$id."' ");
 
-        if(mysql_num_rows($sqlQuery) > 0){
+        if($sqlQuery){
             $this->mensagem = 'Notificação excluída com sucesso!';
         }else{
             $this->mensagem = 'Notificação não foi excluída!';
