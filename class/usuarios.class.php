@@ -49,7 +49,7 @@ class usuarios{
         $valida = $this->verificaCadastro($email);
         if($valida){
             $query = mysql_query($sqlquery);
-            if(mysql_query($sqlquery)){
+            if($query){
                 $this->resposta = "Usuário Cadastrado com sucesso";
             }else{
                 $this->resposta = "Usuário não cadastrado";

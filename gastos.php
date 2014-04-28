@@ -74,8 +74,12 @@ $listarGastos = $gastos->listarGastos($_SESSION['apartamentoId']);
             </form>
         </div>
     </div>
-    <? } ?>
-    <? foreach($listarGastos as $listarGasto){ ?>
+    <? }
+    $soma = 0;
+    ?>
+    <? foreach($listarGastos as $listarGasto){
+        $soma += $listarGasto['valor'];
+    ?>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -90,5 +94,6 @@ $listarGastos = $gastos->listarGastos($_SESSION['apartamentoId']);
         </table>
     <? } ?>
 </div>
+Total: <? echo $soma?>
 <br/>
 <? include_once 'includes/footer.php'; ?>

@@ -2,7 +2,7 @@
 <html>
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/config/config.php'; ?>
 <head>
-    <title>Livro de Visitas</title>
+    <title>CondoControle</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
@@ -24,7 +24,6 @@
         <? } ?>
         <li><a href="notificacoes.php">Notificações</a> <span class="divider">|</span></li>
         <li><a href="eventos.php">Eventos</a> <span class="divider">|</span></li>
-        <li><a href="votacoes.php">Votações</a> <span class="divider">|</span></li>
         <li><a href="sugestoes.php">Sugestões</a> <span class="divider">|</span></li>
         <li><a href="gastos.php">Gastos</a></li>
         <li style="float: right"><a href="logout.php">Sair</a> <span class="divider"></span></li>

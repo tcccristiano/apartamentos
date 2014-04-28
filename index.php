@@ -43,7 +43,7 @@ if(isset($_POST['entrar'])){
 <body>
 <div class="container">
 
-       <h3>Livro de Visitas</h3><br/><br/>
+       <h3>CondoControle</h3><br/><br/>
         <form class="form-horizontal" method="post" action="">
             <div class="control-group">
                 <label class="control-label" for="inputEmail">Email</label>

@@ -113,6 +113,9 @@ if($_SESSION['regra'] == 'admin'){
             <tr>
                 <td><? echo $listarEvento['descricao']; ?></td>
             </tr>
+            <tr>
+                <td>Data do evento: <? echo date("d/m/Y H:i:s", strtotime($listarEvento['data'])); ?></td>
+            </tr>
             </tbody>
         </table>
     <? } ?>
