@@ -55,52 +55,61 @@ if($_SESSION['regra'] == 'admin'){
 
     <body>
     <div class="container">
-        <div id="newuserlivro">
-            <h4>Cadastro de novo condômino</h4>
-        </div>
-        <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="usuarios.php" onsubmit="return validar(cadastrodeusuarios);">
+        <a href="#modal" role="button" class="btn btn btn-success btn-large btn-block" style="margin:20px 0 40px; text-transform: uppercase; font-weight: bold;" data-toggle="modal">Criar Novo Usuário</a>
 
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Nome</label>
-                <div class="controls">
-                    <input type="text" name="nome" placeholder="Nome">
-                </div>
+        <!-- Modal -->
+
+        <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Criar Novo Usuário</h3>
             </div>
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Email</label>
-                <div class="controls">
-                    <input type="text" name="email" placeholder="Email">
+            <div class="modal-body">
+            <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="usuarios.php" onsubmit="return validar(cadastrodeusuarios);">
+
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Nome</label>
+                    <div class="controls">
+                        <input type="text" name="nome" placeholder="Nome">
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Data de nascimento</label>
-                <div class="controls">
-                    <input type="text" id="dtNascimento" placeholder="dd/mm/yyyy" name="dtNascimento">
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Email</label>
+                    <div class="controls">
+                        <input type="text" name="email" placeholder="Email">
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputPassword">Regra</label>
-                <div class="controls">
-                    <select name="regra">
-                        <option value="admin">Admin</option>
-                        <option value="usuario">Usuário</option>
-                    </select>
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Data de nascimento</label>
+                    <div class="controls">
+                        <input type="text" id="dtNascimento" placeholder="dd/mm/yyyy" name="dtNascimento">
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Número do apartamento</label>
-                <div class="controls">
-                    <input type="text" name="numApartamento" placeholder="Número do apartamento">
-                    <input type="hidden" name="apartamentoId" value="<? echo $_SESSION['apartamentoId'] ?>">
+                <div class="control-group">
+                    <label class="control-label" for="inputPassword">Regra</label>
+                    <div class="controls">
+                        <select name="regra">
+                            <option value="admin">Admin</option>
+                            <option value="usuario">Usuário</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <button type="submit" name="submit" class="btn btn-primary"">Salvar</button>
-<!--                    <input type="submit" class="btn-sucess" value="Salvar">-->
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Número do apartamento</label>
+                    <div class="controls">
+                        <input type="text" name="numApartamento" placeholder="Número do apartamento">
+                        <input type="hidden" name="apartamentoId" value="<? echo $_SESSION['apartamentoId'] ?>">
+                    </div>
                 </div>
-            </div>
-        </form>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" name="submit" class="btn btn-primary"">Salvar</button>
+    <!--                    <input type="submit" class="btn-sucess" value="Salvar">-->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
         <table class="table table-bordered">
             <thead>
             <tr>

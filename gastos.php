@@ -35,31 +35,43 @@ $listarGastos = $gastos->listarGastos($_SESSION['apartamentoId']);
         <h4>Gastos do condomínio</h4>
     </div>
     <? if($_SESSION['regra'] == 'admin') {?>
-        <form name="cadastroGastos" class="form-horizontal" method="post" action="" ">
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Serviço</label>
-                <div class="controls">
-                    <input type="text" name="servico" placeholder="Serviço" required>
+        <a href="#modal" role="button" class="btn btn btn-success btn-large btn-block" style="margin:20px 0 40px; text-transform: uppercase; font-weight: bold;" data-toggle="modal">Criar novo gasto</a>
+
+        <!-- Modal -->
+
+        <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Novo Gasto</h3>
+        </div>
+        <div class="modal-body">
+            <form name="cadastroGastos" class="form-horizontal" method="post" action="" ">
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Serviço</label>
+                    <div class="controls">
+                        <input type="text" name="servico" placeholder="Serviço" required>
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Valor</label>
-                <div class="controls">
-                    <input type="text" name="valor" placeholder="0,00" required>
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Valor</label>
+                    <div class="controls">
+                        <input type="text" name="valor" placeholder="0,00" required>
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <textarea style="width: 75%" class="form-control" rows="10" name="descricao" placeholder="Descreva detalhes do serviço feito..." required ></textarea>
+                <div class="control-group">
+                    <div class="controls">
+                        <textarea style="width: 75%" class="form-control" rows="10" name="descricao" placeholder="Descreva detalhes do serviço feito..." required ></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <button type="submit" name="submit" class="btn btn-primary"">Enviar</button>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" name="submit" class="btn btn-primary"">Enviar</button>
+                    </div>
                 </div>
-            </div>
-<!--            <input type="hidden" name="apartamento_id" value="">-->
-        </form>
+    <!--            <input type="hidden" name="apartamento_id" value="">-->
+            </form>
+        </div>
+    </div>
     <? } ?>
     <? foreach($listarGastos as $listarGasto){ ?>
         <table class="table table-bordered">
