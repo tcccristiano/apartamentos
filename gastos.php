@@ -10,8 +10,6 @@ if(isset($_SESSION['email']) && (isset($_SESSION['senha']))){
 
 $gastos = new gastos();
 
-
-
 if(isset($_POST['submit'])){
 //    print_r($_POST);
 //    die;
@@ -83,7 +81,7 @@ $listarGastos = $gastos->listarGastos($_SESSION['apartamentoId']);
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Serviço: <? echo $listarGasto['servico']; ?> <span style="float: right">R$ <? echo $listarGasto['valor']; ?></span></th>
+                <th>Serviço: <? echo $listarGasto['servico']; ?> <span style="float: right">R$ <? echo number_format($listarGasto['valor'],2,',','.'); ?></span></th>
             </tr>
             </thead>
             <tbody>
@@ -93,7 +91,8 @@ $listarGastos = $gastos->listarGastos($_SESSION['apartamentoId']);
             </tbody>
         </table>
     <? } ?>
+    Total: <? echo number_format($soma,2,',','.');?>
 </div>
-Total: <? echo $soma?>
+
 <br/>
 <? include_once 'includes/footer.php'; ?>
