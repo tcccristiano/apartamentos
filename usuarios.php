@@ -48,7 +48,7 @@ if(isset($_POST['email'])){
     <body>
     <div class="container">
         <div id="newuserlivro">
-            <h4>Novo usuário? Inscreva-se!</h4>
+            <h4>Cadastro de novo condômino</h4>
         </div>
         <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="usuarios.php" onsubmit="return validar(cadastrodeusuarios);">
 
@@ -67,7 +67,7 @@ if(isset($_POST['email'])){
             <div class="control-group">
                 <label class="control-label" for="inputEmail">Data de nascimento</label>
                 <div class="controls">
-                    <input type="text" id="dtNascimento" name="dtNascimento">
+                    <input type="text" id="dtNascimento" placeholder="dd/mm/yyyy" name="dtNascimento">
                 </div>
             </div>
             <div class="control-group">
@@ -88,7 +88,8 @@ if(isset($_POST['email'])){
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <input type="submit" class="btn-sucess" value="Salvar">
+                    <button type="submit" name="submit" class="btn btn-primary"">Salvar</button>
+<!--                    <input type="submit" class="btn-sucess" value="Salvar">-->
                 </div>
             </div>
         </form>

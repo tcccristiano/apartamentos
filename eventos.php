@@ -70,12 +70,12 @@ if($_SESSION['regra'] == 'admin'){
             <div class="control-group">
                 <label class="control-label" for="inputEmail">Data do evento</label>
                 <div class="controls">
-                    <input type="text" id="dtEvento" name="dtEvento">
+                    <input type="text" id="dtEvento" name="dtEvento" required>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <textarea class="form-control" rows="10" name="descricao" placeholder="Descreva o evento..." required ></textarea>
+                    <textarea style="width: 75%" class="form-control" rows="10" name="descricao" placeholder="Descreva o evento..." required ></textarea>
                 </div>
             </div>
             <div class="control-group">
@@ -88,15 +88,21 @@ if($_SESSION['regra'] == 'admin'){
         </form>
     <? } ?>
     <? foreach($listarEventos as $listarEvento){ ?>
-        <div class="list-group">
-            <a href="#" class="list-group-item active">
-                <h4 class="list-group-item-heading"><? echo $listarEvento['nome']; ?></h4>
-                <p class="list-group-item-text"><? echo $listarEvento['descricao']; ?></p>
-                <? if($_SESSION['regra'] == 'admin'){ ?>
-                    <a class="list-group-item-text" style="color:#CD2626" href="eventos.php?excluir=<? echo $listarEvento['id']; ?>">Excluir</a>
-                <? } ?>
-            </a>
-        </div>
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>
+                    <? echo $listarEvento['nome']; ?>  <? if($_SESSION['regra'] == 'admin'){ ?><a style="float:right; color:#CD2626" href="eventos.php?excluir=<? echo $listarEvento['id']; ?>">Excluir</a><? } ?>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><? echo $listarEvento['descricao']; ?></td>
+            </tr>
+            </tbody>
+        </table>
     <? } ?>
 </div>
 <br/>

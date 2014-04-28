@@ -80,7 +80,7 @@ if(isset($_POST['submit'])){
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <textarea class="form-control" rows="10" name="descricao" placeholder="Descreva a notificação..." required ></textarea>
+                    <textarea style="width: 75%" class="form-control" rows="10" name="descricao" placeholder="Descreva a notificação..." required ></textarea>
                 </div>
             </div>
             <div class="control-group">
