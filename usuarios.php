@@ -1,6 +1,7 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/includes/header.php'; ?>
 
 <?
+
 if(isset($_SESSION['email']) && (isset($_SESSION['senha']))){
     header("Location: apartamentos.php");
 }
@@ -74,14 +75,14 @@ if(isset($_POST['email'])){
                 <div class="controls">
                     <select name="regra">
                         <option value="admin">Admin</option>
-                        <option value="usuario">usuario</option>
+                        <option value="usuario">Usuário</option>
                     </select>
                 </div>
             </div>
             <div class="control-group">
                 <label class="control-label" for="inputEmail">Número do apartamento</label>
                 <div class="controls">
-                    <input type="text" name="numApartamento" placeholder="numero do apartamento">
+                    <input type="text" name="numApartamento" placeholder="Número do apartamento">
                     <input type="hidden" name="apartamentoId" value="<? echo $_SESSION['apartamentoId'] ?>">
                 </div>
             </div>

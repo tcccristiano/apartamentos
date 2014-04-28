@@ -93,12 +93,18 @@ if(isset($_POST['submit'])){
         </form>
     <? } ?>
         <? foreach($listarNotificacoes as $listarNotificacao){ ?>
-        <div class="list-group">
-            <a href="#" class="list-group-item active">
-                <h4 class="list-group-item-heading"><? echo $listarNotificacao['titulo']; ?></h4>
-                <p class="list-group-item-text"><? echo $listarNotificacao['descricao']; ?></p>
-            </a>
-        </div>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th><? echo $listarNotificacao['titulo']; ?></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><? echo $listarNotificacao['descricao']; ?></td>
+                </tr>
+                </tbody>
+            </table>
         <? } ?>
     </div>
     <br/>

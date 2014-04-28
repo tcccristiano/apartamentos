@@ -75,7 +75,7 @@ if($_SESSION['regra'] == 'admin'){
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <textarea class="form-control" rows="10" name="descricao" placeholder="Descreva a notificação..." required ></textarea>
+                    <textarea class="form-control" rows="10" name="descricao" placeholder="Descreva o evento..." required ></textarea>
                 </div>
             </div>
             <div class="control-group">
