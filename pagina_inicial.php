@@ -8,6 +8,10 @@ if(isset($_POST['logout'])){
     header("Location: index.php");
 }
 
+$apartamento = new apartamentos();
+
+$condominio = $apartamento->listarApartamento($_SESSION['apartamentoId']);
+
 ?>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -48,13 +52,14 @@ if(isset($_POST['logout'])){
     <body>
     <div class="container">
         <div class="hero-unit">
-            <h1>Olá, <? echo $_SESSION['nome']; ?></h1>
+<!--            <h1>Olá, --><?// echo $_SESSION['nome']; ?><!--</h1>-->
+            <h1>Condomínio <? echo $condominio['nome']; ?></h1>
             <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         </div>
     <form class="form-horizontal" method="post" action="">
         <div class="control-group">
             <div class="controls">
-                <textarea style="width: 75%;" class="form-control" rows="3" name="mensagem" placeholder="Escreva sua mensagem..." required ></textarea>
+                <textarea style="width: 75%;" class="form-control" rows="3" name="mensagem" placeholder="Escreva uma mensagem aos condôminos..." required ></textarea>
             </div>
         </div>
         <div class="control-group">
