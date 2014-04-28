@@ -10,10 +10,8 @@ if(isset($_SESSION['email']) && (isset($_SESSION['senha']))){
 
 $eventos = new eventos();
 
-if($_SESSION['regra'] == 'admin'){
-    $listarEventos = $eventos->listarEventos();
-}else{
-    $listarEventos = $eventos->listarEventos($_SESSION['id']);
+if(isset($_GET['excluir'])){
+    $eventos->excluirEvento($_GET['excluir']);
 }
 
 if(isset($_POST['submit'])){
@@ -28,6 +26,13 @@ if(isset($_POST['submit'])){
         </div>
     <? }
 }
+
+if($_SESSION['regra'] == 'admin'){
+    $listarEventos = $eventos->listarEventos();
+}else{
+    $listarEventos = $eventos->listarEventos($_SESSION['id']);
+}
+
 ?>
 
     <script type="text/javascript">
@@ -43,6 +48,9 @@ if(isset($_POST['submit'])){
                 return true;
             }
         }
+        jQuery(function($){
+            $("#dtEvento").mask("99/99/9999");
+        });
     </script>
 
 <body>
@@ -57,6 +65,12 @@ if(isset($_POST['submit'])){
                 <label class="control-label" for="inputEmail">Título</label>
                 <div class="controls">
                     <input type="text" name="titulo" placeholder="Título" required>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Data do evento</label>
+                <div class="controls">
+                    <input type="text" id="dtEvento" name="dtEvento">
                 </div>
             </div>
             <div class="control-group">
@@ -78,6 +92,9 @@ if(isset($_POST['submit'])){
             <a href="#" class="list-group-item active">
                 <h4 class="list-group-item-heading"><? echo $listarEvento['nome']; ?></h4>
                 <p class="list-group-item-text"><? echo $listarEvento['descricao']; ?></p>
+                <? if($_SESSION['regra'] == 'admin'){ ?>
+                    <a class="list-group-item-text" style="color:#CD2626" href="eventos.php?excluir=<? echo $listarEvento['id']; ?>">Excluir</a>
+                <? } ?>
             </a>
         </div>
     <? } ?>
