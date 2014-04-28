@@ -17,6 +17,10 @@ $listarUsuarios = $usuario->listarUsuarios();
 
 $notificacoes = new notificacoes();
 
+if(isset($_GET['excluir'])){
+    $notificacoes->excluirNotificacao($_GET['excluir']);
+}
+
 if($_SESSION['regra'] == 'admin'){
     $listarNotificacoes = $notificacoes->listarNotificacoes();
 }else{
@@ -96,7 +100,7 @@ if(isset($_POST['submit'])){
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th><? echo $listarNotificacao['titulo']; ?></th>
+                    <th><? echo $listarNotificacao['titulo']; ?> <? if($_SESSION['regra'] == 'admin'){ ?><a style="float:right; color:#CD2626" href="notificacoes.php?excluir=<? echo $listarNotificacao['id']; ?>">Excluir</a><? } ?></th>
                 </tr>
                 </thead>
                 <tbody>
