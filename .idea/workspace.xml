@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8d6e6a1-b5a4-42e2-abb7-bb675d72df0c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/class/apartamento.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/class/gastos.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gastos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eventos.php" afterPath="$PROJECT_DIR$/eventos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mensagem.php" afterPath="$PROJECT_DIR$/mensagem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/class/mensagens.class.php" afterPath="$PROJECT_DIR$/class/mensagens.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notificacoes.php" afterPath="$PROJECT_DIR$/notificacoes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagina_inicial.php" afterPath="$PROJECT_DIR$/pagina_inicial.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sugestoes.php" afterPath="$PROJECT_DIR$/sugestoes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usuarios.php" afterPath="$PROJECT_DIR$/usuarios.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="livrodevisitas.iws" />
@@ -38,8 +50,10 @@
       <file leaf-file-name="usuarios.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/usuarios.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="85" selection-start="3475" selection-end="3475" vertical-scroll-proportion="-9.066667" vertical-offset="1681" max-vertical-offset="2541">
-              <folding />
+            <state line="68" column="0" selection-start="2397" selection-end="2397" vertical-scroll-proportion="-16.066668" vertical-offset="946" max-vertical-offset="3024">
+              <folding>
+                <element signature="e#1716#1789#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,20 +61,11 @@
       <file leaf-file-name="notificacoes.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1386">
+            <state line="46" column="0" selection-start="1504" selection-end="1504" vertical-scroll-proportion="-32.2" vertical-offset="0" max-vertical-offset="1386">
               <folding>
                 <marker date="1398657397776" expanded="true" signature="362:369" placeholder="SELECT * FRO..notificacao..." />
                 <marker date="1398657397776" expanded="true" signature="362:846" placeholder="SELECT * FRO..notificacao..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sugestoes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sugestoes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="111" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0" vertical-offset="1679" max-vertical-offset="2205">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -77,8 +82,12 @@
       <file leaf-file-name="notificacoes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notificacoes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="161" selection-start="3884" selection-end="3884" vertical-scroll-proportion="0.0" vertical-offset="2017" max-vertical-offset="2520">
-              <folding />
+            <state line="71" column="54" selection-start="2335" selection-end="2335" vertical-scroll-proportion="-13.266666" vertical-offset="1093" max-vertical-offset="2793">
+              <folding>
+                <element signature="e#1871#1944#0" expanded="true" />
+                <element signature="e#3793#3811#0" expanded="true" />
+                <element signature="e#4772#4792#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,14 +101,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eventos.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sugestoes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sugestoes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="67" selection-start="2244" selection-end="2244" vertical-scroll-proportion="-9.066667" vertical-offset="1240" max-vertical-offset="2604">
+              <folding>
+                <element signature="e#1873#1946#0" expanded="true" />
+                <element signature="e#3931#3951#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gastos.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gastos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="22" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.3906977" vertical-offset="525" max-vertical-offset="2079">
+              <folding>
+                <element signature="e#1060#1133#0" expanded="true" />
+                <element signature="e#2382#2400#0" expanded="true" />
+                <element signature="e#3148#3168#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventos.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eventos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="17" selection-start="4368" selection-end="4368" vertical-scroll-proportion="0.7069768" vertical-offset="1702" max-vertical-offset="2562">
+            <state line="67" column="49" selection-start="2235" selection-end="2235" vertical-scroll-proportion="-13.266666" vertical-offset="1009" max-vertical-offset="2646">
               <folding>
-                <element signature="e#1670#1743#0" expanded="true" />
-                <element signature="e#3147#3165#0" expanded="true" />
-                <element signature="e#4076#4110#0" expanded="true" />
+                <element signature="e#1782#1855#0" expanded="true" />
+                <element signature="e#3303#3321#0" expanded="true" />
+                <element signature="e#4302#4322#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,12 +165,13 @@
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/class/eventos.class.php" />
         <option value="$PROJECT_DIR$/class/usuarios.class.php" />
-        <option value="$PROJECT_DIR$/usuarios.php" />
         <option value="$PROJECT_DIR$/class/notificacoes.class.php" />
-        <option value="$PROJECT_DIR$/notificacoes.php" />
-        <option value="$PROJECT_DIR$/sugestoes.php" />
         <option value="$PROJECT_DIR$/class/sugestoes.class.php" />
+        <option value="$PROJECT_DIR$/usuarios.php" />
+        <option value="$PROJECT_DIR$/notificacoes.php" />
         <option value="$PROJECT_DIR$/eventos.php" />
+        <option value="$PROJECT_DIR$/sugestoes.php" />
+        <option value="$PROJECT_DIR$/gastos.php" />
       </list>
     </option>
   </component>
@@ -185,6 +220,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="apartamentos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apartamentos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apartamentos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -296,17 +341,12 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/class/usuarios.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="14" selection-start="440" selection-end="1491" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usuarios.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2100">
-          <folding />
+          <folding>
+            <element signature="e#1716#1789#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -320,7 +360,11 @@
     <entry file="file://$PROJECT_DIR$/notificacoes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="6" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="2310">
-          <folding />
+          <folding>
+            <element signature="e#1871#1944#0" expanded="true" />
+            <element signature="e#3793#3811#0" expanded="true" />
+            <element signature="e#4772#4792#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -335,9 +379,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="14" selection-start="3543" selection-end="3543" vertical-scroll-proportion="0.0" vertical-offset="1626" max-vertical-offset="2226">
           <folding>
-            <element signature="e#1670#1743#0" expanded="true" />
-            <element signature="e#3147#3165#0" expanded="true" />
-            <element signature="e#4076#4110#0" expanded="true" />
+            <element signature="e#1782#1855#0" expanded="true" />
+            <element signature="e#3303#3321#0" expanded="true" />
+            <element signature="e#4302#4322#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -369,7 +413,11 @@
     <entry file="file://$PROJECT_DIR$/notificacoes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="5" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="2310">
-          <folding />
+          <folding>
+            <element signature="e#1871#1944#0" expanded="true" />
+            <element signature="e#3793#3811#0" expanded="true" />
+            <element signature="e#4772#4792#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -377,9 +425,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="28" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1911">
           <folding>
-            <element signature="e#1670#1743#0" expanded="true" />
-            <element signature="e#3147#3165#0" expanded="true" />
-            <element signature="e#4076#4110#0" expanded="true" />
+            <element signature="e#1782#1855#0" expanded="true" />
+            <element signature="e#3303#3321#0" expanded="true" />
+            <element signature="e#4302#4322#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -411,7 +459,11 @@
     <entry file="file://$PROJECT_DIR$/notificacoes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="5" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="2310">
-          <folding />
+          <folding>
+            <element signature="e#1871#1944#0" expanded="true" />
+            <element signature="e#3793#3811#0" expanded="true" />
+            <element signature="e#4772#4792#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -419,9 +471,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="28" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1911">
           <folding>
-            <element signature="e#1670#1743#0" expanded="true" />
-            <element signature="e#3147#3165#0" expanded="true" />
-            <element signature="e#4076#4110#0" expanded="true" />
+            <element signature="e#1782#1855#0" expanded="true" />
+            <element signature="e#3303#3321#0" expanded="true" />
+            <element signature="e#4302#4322#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -449,7 +501,11 @@
     <entry file="file://$PROJECT_DIR$/notificacoes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="1" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="2310">
-          <folding />
+          <folding>
+            <element signature="e#1871#1944#0" expanded="true" />
+            <element signature="e#3793#3811#0" expanded="true" />
+            <element signature="e#4772#4792#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -462,9 +518,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="28" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="2310">
           <folding>
-            <element signature="e#1670#1743#0" expanded="true" />
-            <element signature="e#3147#3165#0" expanded="true" />
-            <element signature="e#4076#4110#0" expanded="true" />
+            <element signature="e#1782#1855#0" expanded="true" />
+            <element signature="e#3303#3321#0" expanded="true" />
+            <element signature="e#4302#4322#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -581,30 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1386">
-          <folding>
-            <marker date="1398657397776" expanded="true" signature="362:369" placeholder="SELECT * FRO..notificacao..." />
-            <marker date="1398657397776" expanded="true" signature="362:846" placeholder="SELECT * FRO..notificacao..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notificacoes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="161" selection-start="3884" selection-end="3884" vertical-scroll-proportion="0.0" vertical-offset="2017" max-vertical-offset="2520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sugestoes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="111" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0" vertical-offset="1679" max-vertical-offset="2205">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/class/sugestoes.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="46" selection-start="1570" selection-end="1570" vertical-scroll-proportion="-15.433333" vertical-offset="566" max-vertical-offset="1449">
@@ -619,20 +651,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1504" selection-end="1504" vertical-scroll-proportion="-32.2" vertical-offset="0" max-vertical-offset="1386">
+          <folding>
+            <marker date="1398657397776" expanded="true" signature="362:369" placeholder="SELECT * FRO..notificacao..." />
+            <marker date="1398657397776" expanded="true" signature="362:846" placeholder="SELECT * FRO..notificacao..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/usuarios.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="85" selection-start="3475" selection-end="3475" vertical-scroll-proportion="-9.066667" vertical-offset="1681" max-vertical-offset="2541">
-          <folding />
+        <state line="68" column="0" selection-start="2397" selection-end="2397" vertical-scroll-proportion="-16.066668" vertical-offset="946" max-vertical-offset="3024">
+          <folding>
+            <element signature="e#1716#1789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notificacoes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="54" selection-start="2335" selection-end="2335" vertical-scroll-proportion="-13.266666" vertical-offset="1093" max-vertical-offset="2793">
+          <folding>
+            <element signature="e#1871#1944#0" expanded="true" />
+            <element signature="e#3793#3811#0" expanded="true" />
+            <element signature="e#4772#4792#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eventos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="17" selection-start="4368" selection-end="4368" vertical-scroll-proportion="0.7069768" vertical-offset="1702" max-vertical-offset="2562">
+        <state line="67" column="49" selection-start="2235" selection-end="2235" vertical-scroll-proportion="-13.266666" vertical-offset="1009" max-vertical-offset="2646">
           <folding>
-            <element signature="e#1670#1743#0" expanded="true" />
-            <element signature="e#3147#3165#0" expanded="true" />
-            <element signature="e#4076#4110#0" expanded="true" />
+            <element signature="e#1782#1855#0" expanded="true" />
+            <element signature="e#3303#3321#0" expanded="true" />
+            <element signature="e#4302#4322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sugestoes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="67" selection-start="2244" selection-end="2244" vertical-scroll-proportion="-9.066667" vertical-offset="1240" max-vertical-offset="2604">
+          <folding>
+            <element signature="e#1873#1946#0" expanded="true" />
+            <element signature="e#3931#3951#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gastos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="22" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.3906977" vertical-offset="525" max-vertical-offset="2079">
+          <folding>
+            <element signature="e#1060#1133#0" expanded="true" />
+            <element signature="e#2382#2400#0" expanded="true" />
+            <element signature="e#3148#3168#0" expanded="true" />
           </folding>
         </state>
       </provider>

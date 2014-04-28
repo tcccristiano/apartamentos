@@ -3,6 +3,8 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/sugestoes.class.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/usuarios.class.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/mensagens.class.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/gastos.class.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/apartamento.class.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/apartamentos/class/db.class.php'; ?>
 
 
@@ -17,6 +19,11 @@ $host = 'localhost';
 $user = 'root';
 $pass = '';
 $db = 'apartamentos';
+
+//$host = 'cpmy0048.servidorwebfacil.com';
+//$user = 'mecurei_cris';
+//$pass = 'palmeiras';
+//$db = 'mecurei_apartamento';
 
 $conectar->dbConectar($host, $user, $pass, $db);
 //if(is_null($_SESSION['id'])){

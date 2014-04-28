@@ -55,53 +55,57 @@ if($_SESSION['regra'] == 'admin'){
 
 <body>
 <div class="container">
-
-    <a href="#modal" role="button" class="btn btn btn-success btn-large btn-block" style="margin:20px 0 40px; text-transform: uppercase; font-weight: bold;" data-toggle="modal">Criar Evento</a>
-
-    <!-- Modal -->
-    <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel">Eventos</h3>
-        </div>
-        <div class="modal-body">
-            <? if($_SESSION['regra'] == 'admin') {?>
-                <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="" onsubmit="return validar(cadastrodeusuarios);">
-
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail">Título</label>
-                        <div class="controls">
-                            <input type="text" name="titulo" placeholder="Título" required>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail">Data do evento</label>
-                        <div class="controls">
-                            <input type="text" id="dtEvento" name="dtEvento" required>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="controls">
-                            <textarea style="width: 75%" class="form-control" rows="10" name="descricao" placeholder="Descreva o evento..." required ></textarea>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="controls">
-                            <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </div>
-                    <input type="hidden" name="data_criacao" value="<? echo date('Y-m-d H:m:s'); ?>">
-                    <input type="hidden" name="ativo" value="1">
-                </form>
-            <? } ?>
-        </div>
+    <div id="newuserlivro">
+        <h4>Eventos</h4>
     </div>
+    <? if($_SESSION['regra'] == 'admin') {?>
+        <a href="#modal" role="button" class="btn btn btn-success btn-large btn-block" style="margin:20px 0 40px; text-transform: uppercase; font-weight: bold;" data-toggle="modal">Criar Evento</a>
+
+        <!-- Modal -->
+        <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Novo Evento</h3>
+            </div>
+            <div class="modal-body">
+
+                    <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="" onsubmit="return validar(cadastrodeusuarios);">
+
+                        <div class="control-group">
+                            <label class="control-label" for="inputEmail">Título</label>
+                            <div class="controls">
+                                <input type="text" name="titulo" placeholder="Título" required>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="inputEmail">Data do evento</label>
+                            <div class="controls">
+                                <input type="text" id="dtEvento" name="dtEvento" required>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <textarea style="width: 75%" class="form-control" rows="10" name="descricao" placeholder="Descreva o evento..." required ></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </div>
+                        <input type="hidden" name="data_criacao" value="<? echo date('Y-m-d H:m:s'); ?>">
+                        <input type="hidden" name="ativo" value="1">
+                    </form>
+
+            </div>
+        </div>
+    <? } ?>
     <? foreach($listarEventos as $listarEvento){ ?>
         <table class="table table-bordered">
             <thead>
             <tr>
                 <th>
-                    <? echo $listarEvento['nome']; ?>  <? if($_SESSION['regra'] == 'admin'){ ?><a style="float:right; color:#CD2626" href="eventos.php?excluir=<? echo $listarEvento['id']; ?>">Excluir</a><? } ?>
+                    <? echo $listarEvento['nome']; ?>  <? if($_SESSION['regra'] == 'admin'){ ?><a class="btn-small btn-danger" style="float:right;" href="eventos.php?excluir=<? echo $listarEvento['id']; ?>">Excluir</a><? } ?>
                 </th>
             </tr>
             </thead>

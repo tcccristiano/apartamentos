@@ -25,7 +25,8 @@
         <li><a href="notificacoes.php">Notificações</a> <span class="divider">|</span></li>
         <li><a href="eventos.php">Eventos</a> <span class="divider">|</span></li>
         <li><a href="votacoes.php">Votações</a> <span class="divider">|</span></li>
-        <li><a href="sugestoes.php">Sugestões</a></li>
+        <li><a href="sugestoes.php">Sugestões</a> <span class="divider">|</span></li>
+        <li><a href="gastos.php">Gastos</a></li>
         <li style="float: right"><a href="logout.php">Sair</a> <span class="divider"></span></li>
         <li style="float: right"><a href="meuperfil.php">Meu perfil</a> <span class="divider">|</span></li>
         <li style="float: right">Bem vindo(a), <? echo $_SESSION['nome'] ?> !<span class="divider">|</span></li>

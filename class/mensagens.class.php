@@ -6,8 +6,8 @@ class mensagens{
     public $mensagens;
     public $minhasmsg;
 
-    public function enviarMsg($texto, $usuario){
-        $sqlquery="INSERT INTO mensagens (msg_texto, usuario_id) VALUES ('".$texto."', '".$usuario."')";
+    public function enviarMsg($mensagem, $usuario){
+        $sqlquery="INSERT INTO mensagens (usuario_id, mensagem) VALUES ('".$usuario."', '".$mensagem."')";
         mysql_query($sqlquery);
         if(mysql_affected_rows() > 0){
             echo "Mensagem enviada com sucesso";
@@ -17,11 +17,11 @@ class mensagens{
     }
 
     public function consultaMensagens(){
-        $sqlquery = 'SELECT m.msg_id, m.msg_texto, u.usuario_id, u.usuario_nome, u.usuario_email, u.usuario_website
+        $sqlquery = 'SELECT m.id, m.mensagem, u.id, u.nome, u.email, u.numero_apartamento
                         FROM mensagens m
-                        INNER JOIN usuario u
-                        on(m.usuario_id = u.usuario_id)
-                        ORDER BY m.msg_id DESC';
+                        INNER JOIN usuario u on(m.usuario_id = u.id)
+                        INNER JOIN apartamento a ON u.apartamento_id = a.id
+                        ORDER BY m.id DESC';
 
         $result = mysql_query($sqlquery);
         if(mysql_num_rows($result) > 0){
@@ -32,13 +32,15 @@ class mensagens{
                     'usr_id'        => $row[2],
                     'usr_nome'      => $row[3],
                     'usr_email'     => $row[4],
-                    'usr_website'   => $row[5]
+                    'usr_apartamento'   => $row[5]
                 );
             }
         }else{
             $this->html = 'nenhuma mensagem cadastrada';
         }
-        $this->resposta();
+        print_r($this->resposta());
+        die;
+
     }
 
     public function minhasMensagens(){
@@ -60,11 +62,20 @@ class mensagens{
     public function resposta(){
         if(count($this->mensagens) > 0){
             foreach($this->mensagens as $value){
-                $this->html .= '<strong>'.$value['usr_nome'].':<br>'.'</strong>'.$value['texto'].'<br>';
-                $this->html .= '<strong>E-mail: </strong>'.$value['usr_email'].'<br>';
-                $this->html .= '<strong>Website: </strong>'.$value['usr_website'].'<br><br>';
+                $this->html = '<table style="width: 77%;"class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>'.$value['usr_nome'].' - Apto '.$value['usr_apartamento'].'</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Mensagem:</strong> '.$value['texto'].'</td>
+                </tr>
+                </tbody>
+            </table>';
+                echo $this->html;
             }
-            echo $this->html;
         }else{
             echo $this->html;
         }

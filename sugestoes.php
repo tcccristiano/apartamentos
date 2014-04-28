@@ -61,39 +61,58 @@ if($_SESSION['regra'] == 'admin'){
 <body>
 <div class="container">
     <div id="newuserlivro">
-        <h4>Sugestões</h4>
+        <h4>Sugestão</h4>
     </div>
     <? if($_SESSION['regra'] == 'usuario') {?>
-        <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="" onsubmit="return validar(cadastrodeusuarios);">
+        <a href="#modal" role="button" class="btn btn btn-success btn-large btn-block" style="margin:20px 0 40px; text-transform: uppercase; font-weight: bold;" data-toggle="modal">Criar Sugestão</a>
 
-            <div class="control-group">
-                <label class="control-label" for="inputEmail">Título</label>
-                <div class="controls">
-                    <input type="text" name="titulo" placeholder="Título" required>
-                </div>
+        <!-- Modal -->
+
+        <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Nova Sugestão</h3>
             </div>
-            <div class="control-group">
-                <div class="controls">
-                    <textarea class="form-control" rows="10" name="descricao" placeholder="Descreva a sugestão..." required ></textarea>
-                </div>
+            <div class="modal-body">
+
+                <form name="cadastrodeusuarios" class="form-horizontal" method="post" action="" onsubmit="return validar(cadastrodeusuarios);">
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail">Título</label>
+                        <div class="controls">
+                            <input type="text" name="titulo" placeholder="Título" required>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <textarea class="form-control" rows="10" name="descricao" placeholder="Descreva a sugestão..." required ></textarea>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" name="submit" class="btn btn-primary"">Enviar</button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="data_criacao" value="<? echo date('Y-m-d H:m:s'); ?>">
+                    <input type="hidden" name="ativo" value="1">
+                </form>
+
             </div>
-            <div class="control-group">
-                <div class="controls">
-                    <button type="submit" name="submit" class="btn btn-primary"">Enviar</button>
-                </div>
-            </div>
-            <input type="hidden" name="data_criacao" value="<? echo date('Y-m-d H:m:s'); ?>">
-            <input type="hidden" name="ativo" value="1">
-        </form>
+        </div>
     <? } ?>
     <? foreach($listarSugestoes as $listarSugestao){ ?>
-        <div class="list-group">
-            <a href="#" class="list-group-item active">
-                <h4 class="list-group-item-heading"><? echo $listarSugestao['nome']; ?></h4>
-                <p class="list-group-item-text"><? echo $listarSugestao['descricao']; ?></p>
-                <? if($_SESSION['regra'] == 'usuario'){ ?><a style="float:right; color:#CD2626" href="sugestoes.php?excluir=<? echo $listarSugestao['id']; ?>">Excluir</a><? } ?>
-            </a>
-        </div>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th><? echo $listarSugestao['nome']; ?> <? if($_SESSION['regra'] == 'usuario'){ ?><a class="btn-small btn-danger" style="float:right;" href="sugestoes.php?excluir=<? echo $listarSugestao['id']; ?>">Excluir</a><? } ?></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><? echo $listarSugestao['descricao']; ?></td>
+            </tr>
+            </tbody>
+        </table>
     <? } ?>
 </div>
 <br/>
