@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8d6e6a1-b5a4-42e2-abb7-bb675d72df0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/class/eventos.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.maskedinput.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/class/sugestoes.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cadastro.php" afterPath="$PROJECT_DIR$/cadastro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eventos.php" afterPath="$PROJECT_DIR$/eventos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/class/notificacoes.class.php" afterPath="$PROJECT_DIR$/class/notificacoes.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sugestoes.php" afterPath="$PROJECT_DIR$/sugestoes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/class/usuarios.class.php" afterPath="$PROJECT_DIR$/class/usuarios.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usuarios.php" afterPath="$PROJECT_DIR$/usuarios.php" />
-    </list>
+    <list default="true" id="f8d6e6a1-b5a4-42e2-abb7-bb675d72df0c" name="Default" comment="" />
     <ignored path="livrodevisitas.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,38 +23,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="notificacoes.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
+      <file leaf-file-name="meuperfil.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meuperfil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="59" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="1365">
+            <state line="85" column="34" selection-start="3036" selection-end="3036" vertical-scroll-proportion="-13.125" vertical-offset="1050" max-vertical-offset="2142">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eventos.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/eventos.class.php">
+      <file leaf-file-name="usuarios.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usuarios.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="1239">
+            <state line="3" column="0" selection-start="89" selection-end="89" vertical-scroll-proportion="-1.125" vertical-offset="0" max-vertical-offset="2121">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sugestoes.class.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/class/sugestoes.class.php">
+      <file leaf-file-name="pagina_inicial.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pagina_inicial.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="83" selection-start="260" selection-end="431" vertical-scroll-proportion="0.3032491" vertical-offset="42" max-vertical-offset="1449">
+            <state line="4" column="0" selection-start="172" selection-end="172" vertical-scroll-proportion="-2.8" vertical-offset="0" max-vertical-offset="1617">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notificacoes.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="notificacoes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notificacoes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="5" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="2310">
+            <state line="95" column="0" selection-start="3521" selection-end="3521" vertical-scroll-proportion="0.34859675" vertical-offset="1759" max-vertical-offset="2436">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usuarios.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/usuarios.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="24" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.375" vertical-offset="42" max-vertical-offset="2016">
+              <folding>
+                <marker date="1398652297658" expanded="true" signature="196:236" placeholder="SELECT * FRO..usuario..." />
+                <marker date="1398652297658" expanded="true" signature="196:228" placeholder="SELECT * FRO..usuario..." />
+                <marker date="1398652297658" expanded="true" signature="293:314" placeholder="SELECT * FRO..usuario..." />
+                <marker date="1398652297658" expanded="true" signature="762:797" placeholder="UPDATE usuar..." />
+                <marker date="1398652297658" expanded="true" signature="762:787" placeholder="UPDATE usuar..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="49" selection-start="1302" selection-end="1302" vertical-scroll-proportion="-14.7" vertical-offset="126" max-vertical-offset="861">
+              <folding>
+                <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#7;n#ul#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#8;n#ul#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +90,7 @@
       <file leaf-file-name="eventos.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eventos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="28" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1911">
+            <state line="63" column="108" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-11.366667" vertical-offset="982" max-vertical-offset="1911">
               <folding />
             </state>
           </provider>
@@ -96,22 +112,23 @@
         <option value="$PROJECT_DIR$/mensagem.php" />
         <option value="$PROJECT_DIR$/includes/footer.php" />
         <option value="$PROJECT_DIR$/minhasmensagens.php" />
-        <option value="$PROJECT_DIR$/pagina_inicial.php" />
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/votacoes.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/notificacoes.php" />
         <option value="$PROJECT_DIR$/cadastro.php" />
         <option value="$PROJECT_DIR$/js/jquery.maskedinput.js" />
-        <option value="$PROJECT_DIR$/includes/header.php" />
-        <option value="$PROJECT_DIR$/usuarios.php" />
-        <option value="$PROJECT_DIR$/class/usuarios.class.php" />
         <option value="$PROJECT_DIR$/class/sugestoes.class.php" />
         <option value="$PROJECT_DIR$/sugestoes.php" />
         <option value="$PROJECT_DIR$/class/notificacoes.class.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/class/eventos.class.php" />
         <option value="$PROJECT_DIR$/eventos.php" />
+        <option value="$PROJECT_DIR$/usuarios.php" />
+        <option value="$PROJECT_DIR$/pagina_inicial.php" />
+        <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/class/usuarios.class.php" />
+        <option value="$PROJECT_DIR$/meuperfil.php" />
+        <option value="$PROJECT_DIR$/notificacoes.php" />
       </list>
     </option>
   </component>
@@ -122,10 +139,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -153,7 +170,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -196,12 +212,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apartamentos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apartamentos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="class" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,6 +243,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -245,15 +277,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14665191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14826702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2729234" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -296,8 +328,47 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="59" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+        <state line="14" column="59" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="1365">
+          <folding>
+            <marker date="1398644394204" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..notificacao..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/eventos.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="1239">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/sugestoes.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="83" selection-start="260" selection-end="431" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="1449">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notificacoes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="28" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1911">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="59" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
+          <folding>
+            <marker date="1398644394204" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..notificacao..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -332,7 +403,9 @@
     <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="59" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="1365">
-          <folding />
+          <folding>
+            <marker date="1398644394204" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..notificacao..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -377,7 +450,9 @@
     <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="1323">
-          <folding />
+          <folding>
+            <marker date="1398644394204" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..notificacao..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -455,24 +530,9 @@
         <state line="4" column="22" selection-start="73" selection-end="73" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="234" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/mensagens.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="0.5168919" vertical-offset="0" max-vertical-offset="1422" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/votacoes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="1177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pagina_inicial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="26" selection-start="761" selection-end="763" vertical-scroll-proportion="0.33333334" vertical-offset="410" max-vertical-offset="1617" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rockmongo/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="200" selection-end="200" vertical-scroll-proportion="0.252" vertical-offset="0" max-vertical-offset="840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cadastro.php">
@@ -490,11 +550,6 @@
         <state line="6" column="3366" selection-start="3569" selection-end="3569" vertical-scroll-proportion="0.2781457" vertical-offset="0" max-vertical-offset="453" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usuarios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="50" selection-start="1390" selection-end="1390" vertical-scroll-proportion="0.38808665" vertical-offset="667" max-vertical-offset="2100" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="48" selection-start="94" selection-end="94" vertical-scroll-proportion="0.069767445" vertical-offset="0" max-vertical-offset="602" />
@@ -505,38 +560,14 @@
         <state line="62" column="40" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.23104057" vertical-offset="1171" max-vertical-offset="2121" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/usuarios.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1611" selection-end="1611" vertical-scroll-proportion="-6.4666667" vertical-offset="793" max-vertical-offset="1533" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="59" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="1365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="226" selection-end="226" vertical-scroll-proportion="0.21105528" vertical-offset="0" max-vertical-offset="819" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="25" selection-start="566" selection-end="566" vertical-scroll-proportion="0.28140703" vertical-offset="0" max-vertical-offset="651" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notificacoes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="5" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="2310">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eventos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1911">
+        <state line="63" column="108" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-11.366667" vertical-offset="982" max-vertical-offset="1911">
           <folding />
         </state>
       </provider>
@@ -550,7 +581,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class/sugestoes.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="83" selection-start="260" selection-end="431" vertical-scroll-proportion="0.3032491" vertical-offset="42" max-vertical-offset="1449">
+        <state line="14" column="83" selection-start="260" selection-end="431" vertical-scroll-proportion="-8.4" vertical-offset="42" max-vertical-offset="1449">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/mensagens.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="54" selection-start="200" selection-end="201" vertical-scroll-proportion="0.28463855" vertical-offset="0" max-vertical-offset="1659">
+          <folding>
+            <marker date="1398644394201" expanded="true" signature="-1:-1" placeholder="SELECT m.msg..mensagens..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/notificacoes.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="35" selection-start="783" selection-end="783" vertical-scroll-proportion="0.46528804" vertical-offset="189" max-vertical-offset="1365">
+          <folding>
+            <marker date="1398644394204" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..notificacao..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina_inicial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="172" selection-end="172" vertical-scroll-proportion="-2.8" vertical-offset="0" max-vertical-offset="1617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usuarios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="89" selection-end="89" vertical-scroll-proportion="-1.125" vertical-offset="0" max-vertical-offset="2121">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="49" selection-start="1302" selection-end="1302" vertical-scroll-proportion="-14.7" vertical-offset="126" max-vertical-offset="861">
+          <folding>
+            <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#7;n#ul#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#8;n#ul#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/usuarios.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.375" vertical-offset="42" max-vertical-offset="2016">
+          <folding>
+            <marker date="1398652297658" expanded="true" signature="196:236" placeholder="SELECT * FRO..usuario..." />
+            <marker date="1398652297658" expanded="true" signature="196:228" placeholder="SELECT * FRO..usuario..." />
+            <marker date="1398652297658" expanded="true" signature="293:314" placeholder="SELECT * FRO..usuario..." />
+            <marker date="1398652297658" expanded="true" signature="762:797" placeholder="UPDATE usuar..." />
+            <marker date="1398652297658" expanded="true" signature="762:787" placeholder="UPDATE usuar..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meuperfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="34" selection-start="3036" selection-end="3036" vertical-scroll-proportion="-13.125" vertical-offset="1050" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notificacoes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="0" selection-start="3521" selection-end="3521" vertical-scroll-proportion="0.34859675" vertical-offset="1759" max-vertical-offset="2436">
           <folding />
         </state>
       </provider>

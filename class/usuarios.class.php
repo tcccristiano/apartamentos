@@ -1,22 +1,45 @@
 <?php
 
 class usuarios{
-// FAZER NOVO USUARIO E EXCLUIR USUARIO
+
     public $resposta = NULL;
 
-    public function listarUsuarios(){
+    public function listarUsuarios($id = NULL){
+
 
         $usuarios = array();
 
-        $sqlQuery = mysql_query("SELECT * FROM usuario");
+        if(!empty($id)){
+            $sqlQuery = mysql_query("SELECT * FROM usuario WHERE id='".$id."' ");
+        }else{
+            $sqlQuery = mysql_query("SELECT * FROM usuario");
+        }
 
         if(mysql_num_rows($sqlQuery) > 0){
             while($row = mysql_fetch_array($sqlQuery)){
                 $usuarios[] = $row;
             }
         }
-
         return $usuarios;
+    }
+
+    public function editarUsuarios($id, $nome, $email, $data_nascimento, $senha = NULL){
+
+        $dtNascimento = implode('-', array_reverse(explode('/', $data_nascimento)));
+
+        if(!empty($senha)){
+            $sqlQuery = mysql_query("UPDATE usuario SET nome='".$nome."',email='".$email."',data_nascimento='".$dtNascimento."',senha='".md5($senha)."' WHERE id='".$id."' ");
+        }else{
+            $sqlQuery = mysql_query("UPDATE usuario SET nome='".$nome."',email='".$email."',data_nascimento='".$dtNascimento."' WHERE id='".$id."' ");
+        }
+
+        if($sqlQuery){
+            $this->resposta = "Usuário editado com sucesso";
+        }else{
+            $this->resposta = "Usuário não editado";
+        }
+
+        return $this->resposta;
     }
 
     public function cadastro($nome, $email, $dtNascimento, $regra, $numApartamento, $apartamentoId){
