@@ -93,7 +93,7 @@ if($_SESSION['regra'] == 'admin'){
             <thead>
             <tr>
                 <th>
-                    <? echo $listarEvento['nome']; ?>  <? if($_SESSION['regra'] == 'admin'){ ?><a style="float:right; color:#CD2626" href="eventos.php?excluir=<? echo $listarEvento['id']; ?>">Excluir</a><? } ?>
+                    <? echo $listarEvento['nome']; ?>  <? if($_SESSION['regra'] == 'admin'){ ?><a class="btn-small btn-danger" style="float:right;" href="eventos.php?excluir=<? echo $listarEvento['id']; ?>">Excluir</a><? } ?>
                 </th>
             </tr>
             </thead>

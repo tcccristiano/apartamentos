@@ -17,12 +17,11 @@ if(isset($_POST['logout'])){
         });
         function enviaMensagem(){
 
-            var msg = $("textarea[name=msg]").val();
-
+            var msg = $("textarea[name=mensagem]").val();
             $.ajax({
                 type: "POST",
                 url: 'mensagem.php',
-                data: { msg: msg}
+                data: { mensagem: msg}
             }).done(function( msg ) {
                     consutaMensagem();
                     $('.resposta').html(msg).css('display', 'block');
@@ -48,15 +47,19 @@ if(isset($_POST['logout'])){
 
     <body>
     <div class="container">
+        <div class="hero-unit">
+            <h1>Olá, <? echo $_SESSION['nome']; ?></h1>
+            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        </div>
     <form class="form-horizontal" method="post" action="">
         <div class="control-group">
             <div class="controls">
-                <textarea class="form-control" rows="3" name="msg" placeholder="Escreva sua mensagem..." required ></textarea>
+                <textarea style="width: 75%;" class="form-control" rows="3" name="mensagem" placeholder="Escreva sua mensagem..." required ></textarea>
             </div>
         </div>
         <div class="control-group">
-            <div class="cont    rols">
-                <input type="button" class="bt  n btn-primary" name="enviar" onclick="enviaMensagem()" value="enviar">
+            <div class="controls">
+                <input type="button" class="btn btn-primary" name="enviar" onclick="enviaMensagem()" value="Enviar">
             </div>
         </div>
 

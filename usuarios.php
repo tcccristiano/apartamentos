@@ -101,16 +101,30 @@ if($_SESSION['regra'] == 'admin'){
                 </div>
             </div>
         </form>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Apartamento</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Data de criação</th>
+                <th>Ação</th>
+            </tr>
+            </thead>
+            <tbody>
         <? foreach($listaUsuarios as $listaUsuario){ ?>
-            <div class="list-group">
-                <a href="#" class="list-group-item active">
-                    <h4 class="list-group-item-heading"><? echo $listaUsuario['nome']; ?></h4>
-                    <p class="list-group-item-text"><? echo $listaUsuario['descricao']; ?></p>
-                    <? if($_SESSION['regra'] == 'admin'){ ?>
-                        <a class="list-group-item-text" style="color:#CD2626" href="usuarios.php?excluir=<? echo $listaUsuario['id']; ?>">Excluir</a>
-                    <? } ?>
-                </a>
-            </div>
+                <tr>
+                    <td><? echo $listaUsuario['numero_apartamento']; ?></td>
+                    <td><? echo $listaUsuario['nome']; ?></td>
+                    <td><? echo $listaUsuario['email']; ?></td>
+                    <td><? echo $listaUsuario['data_criacao']; ?></td>
+                    <td><? if($_SESSION['regra'] == 'admin'){ ?>
+                            <a class="btn-small btn-danger"  href="usuarios.php?excluir=<? echo $listaUsuario['id']; ?>"><strong>Excluir</strong></a>
+                        <? } ?></td>
+                </tr>
+            </tbody>
+
         <? } ?>
+        </table>
     </div>
 <? include_once 'includes/footer.php'; ?>
