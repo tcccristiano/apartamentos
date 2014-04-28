@@ -74,8 +74,8 @@ class mensagens{
                 </tr>
                 </tbody>
             </table>';
+                echo $this->html;
             }
-            echo $this->html;
         }else{
             echo $this->html;
         }

@@ -100,7 +100,7 @@ if(isset($_POST['submit'])){
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th><? echo $listarNotificacao['titulo']; ?> <? if($_SESSION['regra'] == 'admin'){ ?><a style="float:right; color:#CD2626" href="notificacoes.php?excluir=<? echo $listarNotificacao['id']; ?>">Excluir</a><? } ?></th>
+                    <th><? echo $listarNotificacao['titulo']; ?> <? if($_SESSION['regra'] == 'admin'){ ?><a class="btn-small btn-danger" style="float:right;" href="notificacoes.php?excluir=<? echo $listarNotificacao['id']; ?>">Excluir</a><? } ?></th>
                 </tr>
                 </thead>
                 <tbody>

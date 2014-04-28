@@ -87,13 +87,18 @@ if($_SESSION['regra'] == 'admin'){
         </form>
     <? } ?>
     <? foreach($listarSugestoes as $listarSugestao){ ?>
-        <div class="list-group">
-            <a href="#" class="list-group-item active">
-                <h4 class="list-group-item-heading"><? echo $listarSugestao['nome']; ?></h4>
-                <p class="list-group-item-text"><? echo $listarSugestao['descricao']; ?></p>
-                <? if($_SESSION['regra'] == 'usuario'){ ?><a style="float:right; color:#CD2626" href="sugestoes.php?excluir=<? echo $listarSugestao['id']; ?>">Excluir</a><? } ?>
-            </a>
-        </div>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th><? echo $listarSugestao['nome']; ?> <? if($_SESSION['regra'] == 'usuario'){ ?><a class="btn-small btn-danger" style="float:right;" href="sugestoes.php?excluir=<? echo $listarSugestao['id']; ?>">Excluir</a><? } ?></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><? echo $listarSugestao['descricao']; ?></td>
+            </tr>
+            </tbody>
+        </table>
     <? } ?>
 </div>
 <br/>
