@@ -85,6 +85,21 @@ class usuarios{
             $this->resposta = "Usuário não cadastrado";
         }
     }
+
+    public function excluirUsuario($id){
+
+        $mensagem = null;
+        $sqlQuery = mysql_query("DELETE FROM usuario WHERE id = '".$id."' ");
+
+        if($sqlQuery){
+            $this->mensagem = 'Usuario excluído com sucesso!';
+        }else{
+            $this->mensagem = 'Usuario não foi excluído!';
+        }
+
+        return $this->mensagem;
+
+    }
 }
 
 

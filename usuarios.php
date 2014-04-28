@@ -14,6 +14,10 @@ if(is_null($_SESSION['id'])){
 
 $cadastrar = new usuarios();
 
+if(isset($_GET['excluir'])){
+    $cadastrar->excluirUsuario($_GET['excluir']);
+}
+
 if(isset($_POST['email'])){
     $cadastrar->cadastro($_POST['nome'], $_POST['email'], $_POST['dtNascimento'], $_POST['regra'], $_POST['numApartamento'], $_POST['apartamentoId']);
     if(!is_null($cadastrar->resposta)){ ?>
@@ -24,6 +28,10 @@ if(isset($_POST['email'])){
             </div>
         </div>
     <? }
+}
+
+if($_SESSION['regra'] == 'admin'){
+    $listaUsuarios = $cadastrar->listarUsuarios();
 }
 
 ?>
@@ -92,5 +100,16 @@ if(isset($_POST['email'])){
                 </div>
             </div>
         </form>
+        <? foreach($listaUsuarios as $listaUsuario){ ?>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading"><? echo $listaUsuario['nome']; ?></h4>
+                    <p class="list-group-item-text"><? echo $listaUsuario['descricao']; ?></p>
+                    <? if($_SESSION['regra'] == 'admin'){ ?>
+                        <a class="list-group-item-text" style="color:#CD2626" href="usuarios.php?excluir=<? echo $listaUsuario['id']; ?>">Excluir</a>
+                    <? } ?>
+                </a>
+            </div>
+        <? } ?>
     </div>
 <? include_once 'includes/footer.php'; ?>
