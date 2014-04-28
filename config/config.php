@@ -20,6 +20,11 @@ $user = 'root';
 $pass = '';
 $db = 'apartamentos';
 
+//$host = 'cpmy0048.servidorwebfacil.com';
+//$user = 'mecurei_cris';
+//$pass = 'palmeiras';
+//$db = 'mecurei_apartamento';
+
 $conectar->dbConectar($host, $user, $pass, $db);
 //if(is_null($_SESSION['id'])){
 //    header ('Location: index.php');
